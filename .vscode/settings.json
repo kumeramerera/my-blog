@@ -1,0 +1,16 @@
+{
+  // ─── CSS VALIDATION ──────────────────────────────────────────
+  // Disable VS Code's built-in CSS validation for this project.
+  // This prevents false "Unknown at rule" warnings for Tailwind CSS.
+  // Reason: Tailwind uses @tailwind, @apply, and other directives that
+  // VS Code's default CSS linter doesn't recognize.
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+
+  // ─── TAILWIND CSS INTELLISENSE ─────────────────────────────
+  // This helps the Tailwind extension recognize class names.
+  // The extension is installed as "Tailwind CSS IntelliSense".
+  // It provides autocomplete, hover previews, and linting.
+  "tailwindCSS.experimental.classRegex": []
+}
