@@ -15,70 +15,66 @@ export default function PortfolioPage() {
         </div>
       </header>
 
-      {/* Portfolio Section */}
-      <main className="max-w-4xl mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">My Work</h1>
-        <p className="text-lg text-gray-600 mb-12">
-          Here are some projects I&apos;ve built. Each one showcases my skills in Next.js, PostgreSQL, and modern web development.
-        </p>
+      {/* Hero */}
+      <section className="bg-linear-to-r from-blue-600 to-indigo-600 text-white py-16">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">My Work</h1>
+          <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+            Full-stack applications built with Next.js, TypeScript, and PostgreSQL.
+          </p>
+        </div>
+      </section>
 
-        <div className="grid gap-8">
-          {/* Project 1: This Blog */}
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">This Blog</h2>
-            <p className="text-gray-600 mb-4">
-              A full-stack blog platform with authentication, comments, likes, and an admin dashboard.
-            </p>
-            <div className="flex flex-wrap gap-2 mb-4">
-              <span className="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">Next.js</span>
-              <span className="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">TypeScript</span>
-              <span className="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">PostgreSQL</span>
-              <span className="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">Tailwind CSS</span>
+      {/* Project 1: This Blog */}
+      <main className="max-w-4xl mx-auto px-4 py-12">
+        <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-8 hover:shadow-xl transition">
+          <div className="flex flex-col md:flex-row md:items-start gap-6">
+            <div className="w-full md:w-2/3">
+              <div className="flex flex-wrap items-center gap-3 mb-2">
+                <h2 className="text-2xl font-bold text-gray-900">Full-Stack Blog Platform</h2>
+                <span className="bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full font-medium">Live</span>
+              </div>
+              <p className="text-gray-600 mb-4">
+                A complete blog with authentication, comments, likes, admin dashboard, and spam prevention.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">Next.js</span>
+                <span className="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">TypeScript</span>
+                <span className="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">PostgreSQL</span>
+                <span className="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">Drizzle</span>
+                <span className="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">Tailwind CSS</span>
+              </div>
             </div>
-            <Link
-              href="/blog"
-              className="text-blue-600 hover:underline text-sm font-medium"
-            >
-              View Live →
-            </Link>
-          </div>
-
-          {/* Project 2: Placeholder */}
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">Next.js E-Commerce</h2>
-            <p className="text-gray-600 mb-4">
-              An online store built with Next.js, Stripe, and Sanity CMS. (Coming soon)
-            </p>
-            <div className="flex flex-wrap gap-2 mb-4">
-              <span className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full">Next.js</span>
-              <span className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full">Stripe</span>
-              <span className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full">Sanity</span>
+            <div className="w-full md:w-1/3 flex flex-col gap-2">
+              <a
+                href="https://github.com/kumeramerera/my-blog"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-center bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition text-sm font-medium"
+              >
+                GitHub
+              </a>
+              <a
+                href="#"
+                className="text-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm font-medium"
+              >
+                Live Demo
+              </a>
             </div>
-            <span className="text-sm text-gray-400">In Development</span>
-          </div>
-
-          {/* Project 3: Placeholder */}
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">Task Management App</h2>
-            <p className="text-gray-600 mb-4">
-              A full-stack task manager with teams, comments, and real-time updates. (Coming soon)
-            </p>
-            <div className="flex flex-wrap gap-2 mb-4">
-              <span className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full">Next.js</span>
-              <span className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full">WebSockets</span>
-              <span className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full">PostgreSQL</span>
-            </div>
-            <span className="text-sm text-gray-400">In Development</span>
           </div>
         </div>
 
-        {/* Call to Action */}
-        <div className="mt-12 p-6 bg-blue-50 border border-blue-200 rounded-2xl text-center">
-          <h3 className="text-xl font-bold text-gray-900 mb-2">Have a Project in Mind?</h3>
-          <p className="text-gray-600 mb-4">Let&apos;s build something great together.</p>
+        {/* Project 2: Placeholder - Only if you have a second project */}
+        {/* If you don't have a second project, remove this section */}
+
+        <div className="mt-6 p-8 bg-white rounded-2xl shadow-md border border-gray-100 text-center">
+          <h3 className="text-xl font-semibold text-gray-600 mb-2">More Projects Coming</h3>
+          <p className="text-gray-400 text-sm">
+            I&apos;m currently building more projects. Check back soon or contact me to collaborate.
+          </p>
           <Link
             href="/contact"
-            className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition"
+            className="inline-block mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition text-sm font-medium"
           >
             Hire Me
           </Link>

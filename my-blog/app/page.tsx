@@ -79,7 +79,10 @@ export default async function HomePage() {
               </p>
               <div className="mt-2 flex items-center justify-center gap-4">
                 {isAdmin && (
-                  <Link href="/my-super-secret-dashboard" className="text-sm text-blue-600 hover:underline">
+                  <Link
+                    href="/my-super-secret-dashboard"
+                    className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm"
+                  >
                     Dashboard
                   </Link>
                 )}
@@ -89,7 +92,7 @@ export default async function HomePage() {
                     await signOut({ redirectTo: '/' });
                   }}
                 >
-                  <button className="text-sm text-red-500 hover:text-red-600 transition">
+                  <button className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition text-sm">
                     Logout
                   </button>
                 </form>

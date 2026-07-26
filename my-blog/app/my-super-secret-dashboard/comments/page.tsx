@@ -42,7 +42,7 @@ export default async function ModerationPage() {
 
         {pendingComments.length === 0 ? (
           <div className="bg-white rounded-xl shadow-sm p-8 text-center">
-            <p className="text-gray-500">No pending comments. 🎉</p>
+            <p className="text-gray-500">No pending comments.</p>
           </div>
         ) : (
           <div className="space-y-4">
