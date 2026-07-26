@@ -1,12 +1,24 @@
 'use client';
 
+import { useState, useEffect } from 'react';
+
 interface ShareButtonsProps {
   title: string;
   slug: string;
 }
 
 export default function ShareButtons({ title, slug }: ShareButtonsProps) {
-  const url = typeof window !== 'undefined' ? `${window.location.origin}/blog/${slug}` : '';
+  const [url, setUrl] = useState('');
+
+  useEffect(() => {
+    // Use requestAnimationFrame or setTimeout to avoid sync state update
+    const timer = setTimeout(() => {
+      setUrl(`${window.location.origin}/blog/${slug}`);
+    }, 0);
+
+    return () => clearTimeout(timer);
+  }, [slug]);
+
   const encodedUrl = encodeURIComponent(url);
   const encodedTitle = encodeURIComponent(title);
 
@@ -14,7 +26,7 @@ export default function ShareButtons({ title, slug }: ShareButtonsProps) {
     twitter: `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`,
     linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
     facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
-    telegram: `https://t.me/share/url?url=${encodedUrl}&text=${encodedTitle}`, // ← Telegram
+    telegram: `https://t.me/share/url?url=${encodedUrl}&text=${encodedTitle}`,
   };
 
   return (
