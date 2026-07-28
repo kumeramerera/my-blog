@@ -16,7 +16,7 @@ import { NextResponse } from 'next/server';
 // 127.0.0.1 = localhost (always allowed for development)
 const ALLOWED_IPS = [
   '127.0.0.1',
-  '196.188.188.137', // ← Replace with your actual public IP
+  ' 196.189.182.225', // ← Replace with your actual public IP
 ];
 
 // The secret admin path (obfuscated to hide it from attackers)
