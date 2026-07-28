@@ -36,9 +36,11 @@ export default auth((req) => {
   const isAllowedIP = ALLOWED_IPS.includes(userIP) || userIP === '127.0.0.1' || userIP === '::1';
 
   // Block if admin route and IP is not allowed
-  if (isAdminRoute && !isAllowedIP) {
-    return new NextResponse('Access Denied', { status: 403 });
-  }
+  // If it's an admin route and IP is NOT allowed → Block it
+  // TEMPORARILY DISABLED FOR DEPLOYMENT
+  //if (isAdminRoute && !isAllowedIP) {
+  //  return new NextResponse('Access Denied', { status: 403 });
+  //}
 
   // ─── AUTHENTICATION ────────────────────────────────────────────
   // Redirect to login if admin route and not logged in
